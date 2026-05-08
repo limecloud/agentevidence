@@ -1,0 +1,64 @@
+# Agent Evidence
+
+> Agent Evidence is a portable standard for agent evidence, provenance, verification, review, replay, redaction, telemetry correlation, and audit export without becoming the runtime, UI, artifact store, knowledge store, policy system, or trace backend.
+
+Use this file as the concise navigation index for LLMs. Use `llms-full.txt` when a single prompt needs the current core documentation in one markdown file.
+
+## Full context
+
+- [llms-full.txt](https://limecloud.github.io/agentevidence/llms-full.txt): Concatenated current English documentation with source URLs.
+
+## Primary docs
+
+- [What is Agent Evidence?](https://limecloud.github.io/agentevidence/en/what-is-agent-evidence): Conceptual entry point and scope.
+- [Specification](https://limecloud.github.io/agentevidence/en/specification): Latest portable Agent Evidence specification.
+- [Evidence model](https://limecloud.github.io/agentevidence/en/concepts/evidence-model): Object model and graph relationships.
+- [Acceptance scenarios](https://limecloud.github.io/agentevidence/en/authoring/acceptance-scenarios): Behavior-level validation scenarios.
+
+## Contracts
+
+- [Evidence pack](https://limecloud.github.io/agentevidence/en/contracts/evidence-pack): Portable evidence container.
+- [Claim map](https://limecloud.github.io/agentevidence/en/contracts/claim-map): Claim grounding and support relationships.
+- [Source map](https://limecloud.github.io/agentevidence/en/contracts/source-map): Source refs, selectors, retrieval, omissions, and contradictions.
+- [Provenance chain](https://limecloud.github.io/agentevidence/en/contracts/provenance-chain): Production graph for agent outcomes.
+- [Verification and review](https://limecloud.github.io/agentevidence/en/contracts/verification-review): Checks, verdicts, rubrics, and sign-off.
+- [Replay case](https://limecloud.github.io/agentevidence/en/contracts/replay-case): Replay and reconstruction contract.
+- [Redaction and privacy](https://limecloud.github.io/agentevidence/en/contracts/redaction-privacy): Privacy, redaction, retention, and access controls.
+- [Export manifest](https://limecloud.github.io/agentevidence/en/contracts/export-manifest): Portable evidence export manifest.
+- [Telemetry correlation](https://limecloud.github.io/agentevidence/en/contracts/telemetry-correlation): Trace, span, log, and metric references.
+- [Interoperability](https://limecloud.github.io/agentevidence/en/contracts/interoperability): Boundaries with adjacent protocols.
+
+## Authoring and examples
+
+- [Implementation quickstart](https://limecloud.github.io/agentevidence/en/authoring/quickstart): Implementation quickstart.
+- [Answer with citations](https://limecloud.github.io/agentevidence/en/examples/answer-with-citations): Cited answer example.
+- [Tool run audit](https://limecloud.github.io/agentevidence/en/examples/tool-run-audit): Tool-derived decision example.
+- [Artifact review](https://limecloud.github.io/agentevidence/en/examples/artifact-review): Generated artifact review example.
+
+## Reference
+
+- [Glossary](https://limecloud.github.io/agentevidence/en/reference/glossary): Terms used by the standard.
+- [JSON Schemas](https://limecloud.github.io/agentevidence/en/reference/json-schemas): Public schema entrypoints.
+- [Ecosystem boundaries](https://limecloud.github.io/agentevidence/en/reference/ecosystem-boundaries): Boundaries with adjacent systems.
+- [Research sources](https://limecloud.github.io/agentevidence/en/reference/research-sources): External sources used to shape the standard.
+- [Source analysis](https://limecloud.github.io/agentevidence/en/reference/source-analysis): Implementation pressure mapped into standard surfaces.
+
+## Versions
+
+- [v0.1.0 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.0/overview): Latest released version overview.
+- [v0.1.0 specification snapshot](https://limecloud.github.io/agentevidence/en/versions/v0.1.0/specification): Latest released specification snapshot.
+
+## Schemas
+
+- [Evidence pack schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-pack.schema.json): Public evidence pack schema.
+- [Evidence event schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-event.schema.json): Public evidence event schema.
+- [Claim map schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-claim-map.schema.json): Public claim map schema.
+- [Source map schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-source-map.schema.json): Public source map schema.
+- [Provenance schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-provenance.schema.json): Public provenance schema.
+- [Verification schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-verification.schema.json): Public verification/review schema.
+- [Replay schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-replay.schema.json): Public replay schema.
+- [Export manifest schema](https://limecloud.github.io/agentevidence/schemas/agentevidence-export-manifest.schema.json): Public export manifest schema.
+
+## Language mirrors
+
+- Chinese documentation is available under `/zh/` with matching page structure where translated pages exist.

@@ -1,0 +1,47 @@
+{
+  "name": "agentevidence-standard",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Draft documentation for the Agent Evidence standard.",
+  "homepage": "https://limecloud.github.io/agentevidence/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limecloud/agentevidence.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent",
+    "evidence",
+    "provenance",
+    "audit",
+    "llm",
+    "standard"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "files": [
+    "llm.txt",
+    "llm-full.txt",
+    "llms.txt",
+    "llms-full.txt",
+    "docs/public/llm.txt",
+    "docs/public/llm-full.txt",
+    "docs/public/llms.txt",
+    "docs/public/llms-full.txt",
+    "docs/public/schemas/",
+    "docs/en/",
+    "docs/zh/",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "mermaid": "^11.14.0",
+    "vitepress": "^1.6.4"
+  }
+}
