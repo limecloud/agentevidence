@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: LLM full context
       link: /llms-full.txt
+    - theme: alt
+      text: Standards ecosystem
+      link: /en/reference/agent-ecosystem
 
 features:
   - title: Claim-level grounding
@@ -71,3 +74,14 @@ Agent Evidence is the trust layer around agent work. It packages the facts neede
 - [llms.txt](/llms.txt): concise navigation index for AI clients.
 - [llms-full.txt](/llms-full.txt): current English documentation concatenated with source URLs.
 - [llm.txt](/llm.txt) and [llm-full.txt](/llm-full.txt): compatibility aliases.
+
+## Agent Standards Ecosystem
+
+Agent Evidence is part of a connected standards family:
+
+- [Agent Knowledge](https://limecloud.github.io/agentknowledge/)
+- [Agent UI](https://limecloud.github.io/agentui/)
+- [Agent Runtime](https://limecloud.github.io/agentruntime/)
+- [Agent Evidence](https://limecloud.github.io/agentevidence/)
+
+See the [Agent standards ecosystem](/en/reference/agent-ecosystem) page for mutual links and future standard candidates.
