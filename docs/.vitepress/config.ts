@@ -12,7 +12,12 @@ const enNav = [
     text: 'Version',
     items: [
       { text: 'latest', link: '/en/specification' },
-      { text: 'v0.1.5 overview', link: '/en/versions/v0.1.5/overview' },
+      { text: 'v0.1.6 overview', link: '/en/versions/v0.1.6/overview' },
+      { text: 'v0.1.6', link: '/en/versions/v0.1.6/specification' },
+      { text: 'v0.1.6 overview', link: '/en/versions/v0.1.6/overview' },
+    { text: 'v0.1.6 specification', link: '/en/versions/v0.1.6/specification' },
+    { text: 'v0.1.6 changelog', link: '/en/versions/v0.1.6/changelog' },
+    { text: 'v0.1.5 overview', link: '/en/versions/v0.1.5/overview' },
       { text: 'v0.1.5 specification', link: '/en/versions/v0.1.5/specification' },
       { text: 'v0.1.5 changelog', link: '/en/versions/v0.1.5/changelog' },
       { text: 'v0.1.4 overview', link: '/en/versions/v0.1.4/overview' },
@@ -40,7 +45,12 @@ const zhNav = [
     text: '版本',
     items: [
       { text: 'latest', link: '/zh/specification' },
-      { text: 'v0.1.5 概览', link: '/zh/versions/v0.1.5/overview' },
+      { text: 'v0.1.6 概览', link: '/zh/versions/v0.1.6/overview' },
+      { text: 'v0.1.6', link: '/zh/versions/v0.1.6/specification' },
+      { text: 'v0.1.6 概览', link: '/zh/versions/v0.1.6/overview' },
+    { text: 'v0.1.6 规范', link: '/zh/versions/v0.1.6/specification' },
+    { text: 'v0.1.6 变更记录', link: '/zh/versions/v0.1.6/changelog' },
+    { text: 'v0.1.5 概览', link: '/zh/versions/v0.1.5/overview' },
       { text: 'v0.1.5 规范', link: '/zh/versions/v0.1.5/specification' },
       { text: 'v0.1.5 变更记录', link: '/zh/versions/v0.1.5/changelog' },
       { text: 'v0.1.4 概览', link: '/zh/versions/v0.1.4/overview' },
@@ -95,7 +105,10 @@ const enSidebar = [
     { text: 'Artifact review', link: '/en/examples/artifact-review' }
   ]},
   { text: 'Versions', items: [
-      { text: 'v0.1.5 overview', link: '/en/versions/v0.1.5/overview' },
+      { text: 'v0.1.6 overview', link: '/en/versions/v0.1.6/overview' },
+    { text: 'v0.1.6 specification', link: '/en/versions/v0.1.6/specification' },
+    { text: 'v0.1.6 changelog', link: '/en/versions/v0.1.6/changelog' },
+    { text: 'v0.1.5 overview', link: '/en/versions/v0.1.5/overview' },
       { text: 'v0.1.5 specification', link: '/en/versions/v0.1.5/specification' },
       { text: 'v0.1.5 changelog', link: '/en/versions/v0.1.5/changelog' },
       { text: 'v0.1.4 overview', link: '/en/versions/v0.1.4/overview' },
@@ -154,7 +167,10 @@ const zhSidebar = [
     { text: 'Artifact review', link: '/zh/examples/artifact-review' }
   ]},
   { text: '版本', items: [
-      { text: 'v0.1.5 概览', link: '/zh/versions/v0.1.5/overview' },
+      { text: 'v0.1.6 概览', link: '/zh/versions/v0.1.6/overview' },
+    { text: 'v0.1.6 规范', link: '/zh/versions/v0.1.6/specification' },
+    { text: 'v0.1.6 变更记录', link: '/zh/versions/v0.1.6/changelog' },
+    { text: 'v0.1.5 概览', link: '/zh/versions/v0.1.5/overview' },
       { text: 'v0.1.5 规范', link: '/zh/versions/v0.1.5/specification' },
       { text: 'v0.1.5 变更记录', link: '/zh/versions/v0.1.5/changelog' },
       { text: 'v0.1.4 概览', link: '/zh/versions/v0.1.4/overview' },
