@@ -17,7 +17,7 @@ hero:
       link: /zh/specification
     - theme: alt
       text: LLM full context
-      link: /llms-full.txt
+      link: ./llms-full.txt
     - theme: alt
       text: Standards ecosystem
       link: /en/reference/agent-ecosystem
@@ -59,7 +59,7 @@ Agent Evidence is the trust layer around agent work. It packages the facts neede
 - [Implementation quickstart](/en/authoring/quickstart)
 - [Acceptance scenarios](/en/authoring/acceptance-scenarios)
 - [JSON Schemas](/en/reference/json-schemas)
-- [v0.1.2 overview](/en/versions/v0.1.2/overview)
+- [v0.1.3 overview](/en/versions/v0.1.3/overview)
 
 ## 中文入口
 
@@ -71,9 +71,9 @@ Agent Evidence is the trust layer around agent work. It packages the facts neede
 
 ## LLM Entrypoints
 
-- [llms.txt](/llms.txt): concise navigation index for AI clients.
-- [llms-full.txt](/llms-full.txt): current English documentation concatenated with source URLs.
-- [llm.txt](/llm.txt) and [llm-full.txt](/llm-full.txt): compatibility aliases.
+- [llms.txt](./llms.txt): concise navigation index for AI clients.
+- [llms-full.txt](./llms-full.txt): current English documentation concatenated with source URLs.
+- [llm.txt](./llm.txt) and [llm-full.txt](./llm-full.txt): compatibility aliases.
 
 ## Agent Standards Ecosystem
 

@@ -1,20 +1,20 @@
-# Agent Evidence v0.1.2
+# Agent Evidence v0.1.3
 
-Agent Evidence v0.1.2 fixes the Simplified Chinese homepage and aligns both localized index pages with the home landing layout.
+Agent Evidence v0.1.3 fixes repository-base homepage asset links. The localized home pages now keep their home layout while LLM entrypoint links resolve under the project site path and the navigation logo loads from the correct public asset path.
 
 ## Highlights
 
-- Fixes Simplified Chinese homepage rendering by using proper VitePress home layout for localized index pages.
-- Refines English and Simplified Chinese home pages with concise hero actions, quick links, ecosystem links, and LLM entrypoints.
-- Fixes repository-base GitHub Pages logo loading.
-- Keeps the core Agent Evidence specification compatible with v0.1.1.
+- Fixes localized homepage LLM entrypoint links for GitHub Pages repository-base deployments.
+- Fixes the documentation logo asset path under repository-base deployments.
+- Keeps the localized home page layout correction from v0.1.2.
+- Keeps the core Agent Evidence specification compatible with v0.1.2.
 - Updates version snapshots and package metadata.
 
 ## Validation
 
-- `npm run build`
-- Repository-base `VITEPRESS_BASE` build
+- `VITEPRESS_BASE` repository-base build
+- Localized homepage layout checks
+- LLM file consistency checks
+- `git diff --check`
 - `npm audit --omit=dev`
 - `npm pack --dry-run`
-- LLM file consistency checks
-- Localized homepage layout checks
