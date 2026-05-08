@@ -1063,17 +1063,17 @@ These candidates should remain design notes until they can be specified without 
 
 External protocols are references, not ownership transfers. The Agent standards should preserve their native ids and semantics while defining agent-specific relationships.
 
-# Agent Evidence v0.1.1
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.1/overview
+# Agent Evidence v0.1.2
+Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.2/overview
 
-# Agent Evidence v0.1.1
+# Agent Evidence v0.1.2
 
-Agent Evidence v0.1.1 adds public ecosystem exposure for the Agent standards family. The release connects Agent Knowledge, Agent UI, Agent Runtime, and Agent Evidence from the documentation site, LLM entrypoints, and version navigation.
+Agent Evidence v0.1.2 fixes the Simplified Chinese homepage and aligns both localized index pages with the home landing layout.
 
 ## Highlights
 
-- Adds the [Agent standards ecosystem](../../reference/agent-ecosystem.md) reference page.
-- Adds mutual links to Agent Knowledge, Agent UI, Agent Runtime, and Agent Evidence.
-- Adds future standard candidates such as Agent Artifact, Agent Tool, Agent Policy, Agent Context, Agent Evaluation, Agent Workflow, and Agent Model Routing.
-- Updates `llms.txt` / `llms-full.txt` so AI clients can discover the standards family.
-- Keeps the Agent Evidence core specification compatible with v0.1.0.
+- Converts localized index pages into proper `layout: home` landing pages.
+- Adds clearer hero actions for the specification, quickstart, standards ecosystem, and LLM context.
+- Keeps the homepage concise while routing detailed concepts to dedicated documentation pages.
+- Fixes the GitHub Pages logo path so repository-base deployments load the site logo correctly.
+- Keeps the core Agent Evidence specification compatible with v0.1.1.

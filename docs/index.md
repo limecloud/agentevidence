@@ -59,7 +59,7 @@ Agent Evidence is the trust layer around agent work. It packages the facts neede
 - [Implementation quickstart](/en/authoring/quickstart)
 - [Acceptance scenarios](/en/authoring/acceptance-scenarios)
 - [JSON Schemas](/en/reference/json-schemas)
-- [v0.1.0 overview](/en/versions/v0.1.0/overview)
+- [v0.1.2 overview](/en/versions/v0.1.2/overview)
 
 ## 中文入口
 
