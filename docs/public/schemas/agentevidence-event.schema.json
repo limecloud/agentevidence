@@ -67,6 +67,45 @@
     "span_id": {
       "type": "string"
     },
+    "runtime_id": {
+      "$ref": "#/$defs/id"
+    },
+    "session_id": {
+      "$ref": "#/$defs/id"
+    },
+    "thread_id": {
+      "$ref": "#/$defs/id"
+    },
+    "turn_id": {
+      "$ref": "#/$defs/id"
+    },
+    "task_id": {
+      "$ref": "#/$defs/id"
+    },
+    "run_id": {
+      "$ref": "#/$defs/id"
+    },
+    "attempt_id": {
+      "$ref": "#/$defs/id"
+    },
+    "step_id": {
+      "$ref": "#/$defs/id"
+    },
+    "tool_call_id": {
+      "$ref": "#/$defs/id"
+    },
+    "action_id": {
+      "$ref": "#/$defs/id"
+    },
+    "context_id": {
+      "$ref": "#/$defs/id"
+    },
+    "artifact_id": {
+      "$ref": "#/$defs/id"
+    },
+    "policy_decision_id": {
+      "$ref": "#/$defs/id"
+    },
     "subject": {
       "type": "string"
     },

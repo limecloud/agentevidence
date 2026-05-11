@@ -1,6 +1,6 @@
 ---
-title: 规范
-description: Agent Evidence 最新草案规范。
+title: v0.1.8 规范
+description: Agent Evidence v0.1.8 规范快照。
 ---
 
 # 规范

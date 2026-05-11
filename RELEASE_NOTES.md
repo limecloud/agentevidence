@@ -1,17 +1,15 @@
-# Agent Evidence v0.1.7
+# Agent Evidence v0.1.8
 
-Agent Evidence v0.1.7 is a patch release that refreshes the Agent standards ecosystem after Agent Context became a current published standard.
+Agent Evidence v0.1.8 is a runtime-profile alignment release. It makes evidence packs, replay cases, reviews, redaction, and exports explicitly testable against Agent Runtime facts.
 
 ## Highlights
 
-- Adds Agent Context to the current standards table and boundary map.
-- Removes Agent Context from the future-candidate list.
-- Adds Agent Context to README related-standard links.
-- Updates `llms.txt`, `llms-full.txt`, and public LLM copies so AI clients can discover Agent Context.
-- Adds version snapshot pages for v0.1.7.
+- Adds English and Simplified Chinese runtime profile test cases for runtime ids, tool failures, permission denial, routing, evidence packs, replay, review, known gaps, redaction, and export manifests.
+- Aligns interoperability guidance with Agent Runtime `RuntimeEvent`, `ThreadReadModel`, and `TaskSnapshot` sources.
+- Extends event and evidence pack schemas with optional runtime profile correlation fields.
+- Refreshes package metadata, navigation, version snapshots, README, and LLM entrypoints to v0.1.8.
 
 ## Links
 
 - Documentation: https://limecloud.github.io/agentevidence/
-- Agent Context: https://limecloud.github.io/agentcontext/
 - LLM context: https://limecloud.github.io/agentevidence/llms-full.txt

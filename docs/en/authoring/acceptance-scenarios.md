@@ -46,3 +46,7 @@ Given no trace backend was connected, the pack marks telemetry as `not_collected
 ## Peer handoff
 
 Given a peer agent returns an artifact and message id, evidence preserves native peer ids and links them to local claims without rewriting the peer records.
+
+## Agent Runtime profile evidence
+
+Given a runtime turn exports evidence, the evidence pack preserves runtime correlation ids, replay and review use the same source facts, and missing telemetry is marked `not_collected` or `unavailable` rather than fabricated as evidence. See [Runtime profile test cases](./runtime-profile-test-cases).

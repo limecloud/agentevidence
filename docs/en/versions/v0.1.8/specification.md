@@ -1,6 +1,6 @@
 ---
-title: Specification
-description: Agent Evidence latest draft specification.
+title: v0.1.8 specification
+description: Agent Evidence v0.1.8 specification snapshot.
 ---
 
 # Specification

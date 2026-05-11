@@ -51,6 +51,7 @@ features:
 
 - [什么是 Agent Evidence？](./what-is-agent-evidence.md)
 - [最新规范](./specification.md)
+- [Runtime Profile 测试用例](./authoring/runtime-profile-test-cases.md)
 - [证据模型](./concepts/evidence-model.md)
 - [Evidence pack](./contracts/evidence-pack.md)
 - [Claim map](./contracts/claim-map.md)

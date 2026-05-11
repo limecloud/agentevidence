@@ -51,6 +51,7 @@ features:
 
 - [What is Agent Evidence?](./what-is-agent-evidence.md)
 - [Latest specification](./specification.md)
+- [Runtime profile test cases](./authoring/runtime-profile-test-cases.md)
 - [Evidence model](./concepts/evidence-model.md)
 - [Evidence pack](./contracts/evidence-pack.md)
 - [Claim map](./contracts/claim-map.md)

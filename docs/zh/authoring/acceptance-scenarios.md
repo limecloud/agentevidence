@@ -46,3 +46,7 @@ description: Agent Evidence 行为级验证。
 ## Peer handoff
 
 给定 peer agent 返回 artifact 与 message id，evidence 保留 native peer ids，并将其连接到本地 claims，而不是重写 peer records。
+
+## Agent Runtime profile evidence
+
+当 runtime turn 导出 evidence 时，evidence pack 保留 runtime correlation ids，replay 与 review 使用同一组来源事实，缺失 telemetry 被标记为 `not_collected` 或 `unavailable`，而不是伪造成 evidence。详见 [Runtime Profile 测试用例](./runtime-profile-test-cases)。

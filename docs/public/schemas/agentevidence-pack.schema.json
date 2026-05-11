@@ -189,7 +189,25 @@
         "run_id": {
           "$ref": "#/$defs/id"
         },
+        "attempt_id": {
+          "$ref": "#/$defs/id"
+        },
+        "step_id": {
+          "$ref": "#/$defs/id"
+        },
+        "tool_call_id": {
+          "$ref": "#/$defs/id"
+        },
+        "action_id": {
+          "$ref": "#/$defs/id"
+        },
         "artifact_id": {
+          "$ref": "#/$defs/id"
+        },
+        "context_id": {
+          "$ref": "#/$defs/id"
+        },
+        "policy_decision_id": {
           "$ref": "#/$defs/id"
         },
         "answer_id": {

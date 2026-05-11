@@ -15,6 +15,8 @@ Use this file as the concise navigation index for LLMs. Use `llms-full.txt` when
 - [Evidence model](https://limecloud.github.io/agentevidence/en/concepts/evidence-model): Object model and graph relationships.
 - [Acceptance scenarios](https://limecloud.github.io/agentevidence/en/authoring/acceptance-scenarios): Behavior-level validation scenarios.
 
+- [Runtime profile test cases](https://limecloud.github.io/agentevidence/en/authoring/runtime-profile-test-cases): Agent Runtime evidence consistency validation.
+
 ## Contracts
 
 - [Evidence pack](https://limecloud.github.io/agentevidence/en/contracts/evidence-pack): Portable evidence container.
@@ -53,8 +55,10 @@ Use this file as the concise navigation index for LLMs. Use `llms-full.txt` when
 
 ## Versions
 
-- [v0.1.7 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.7/overview): Latest released version overview.
-- [v0.1.7 specification snapshot](https://limecloud.github.io/agentevidence/en/versions/v0.1.7/specification): Latest released specification snapshot.
+- [v0.1.8 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.8/overview): Latest released version overview.
+- [v0.1.8 specification snapshot](https://limecloud.github.io/agentevidence/en/versions/v0.1.8/specification): Latest released specification snapshot.
+- [v0.1.7 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.7/overview): Previous released version overview.
+- [v0.1.7 specification snapshot](https://limecloud.github.io/agentevidence/en/versions/v0.1.7/specification): Previous released specification snapshot.
 - [v0.1.6 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.6/overview): Latest released version overview.
 - [v0.1.6 specification snapshot](https://limecloud.github.io/agentevidence/en/versions/v0.1.6/specification): Latest released specification snapshot.
 - [v0.1.5 overview](https://limecloud.github.io/agentevidence/en/versions/v0.1.5/overview): Previous released version overview.

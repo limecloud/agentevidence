@@ -12,6 +12,9 @@ const enNav = [
     text: 'Version',
     items: [
       { text: 'latest', link: '/en/specification' },
+      { text: 'v0.1.8 overview', link: '/en/versions/v0.1.8/overview' },
+      { text: 'v0.1.8 specification', link: '/en/versions/v0.1.8/specification' },
+      { text: 'v0.1.8 changelog', link: '/en/versions/v0.1.8/changelog' },
       { text: 'v0.1.7 overview', link: '/en/versions/v0.1.7/overview' },
       { text: 'v0.1.7 specification', link: '/en/versions/v0.1.7/specification' },
       { text: 'v0.1.7 changelog', link: '/en/versions/v0.1.7/changelog' },
@@ -48,6 +51,9 @@ const zhNav = [
     text: '版本',
     items: [
       { text: 'latest', link: '/zh/specification' },
+      { text: 'v0.1.8 概览', link: '/zh/versions/v0.1.8/overview' },
+      { text: 'v0.1.8 规范', link: '/zh/versions/v0.1.8/specification' },
+      { text: 'v0.1.8 变更记录', link: '/zh/versions/v0.1.8/changelog' },
       { text: 'v0.1.7 概览', link: '/zh/versions/v0.1.7/overview' },
       { text: 'v0.1.7 规范', link: '/zh/versions/v0.1.7/specification' },
       { text: 'v0.1.7 变更记录', link: '/zh/versions/v0.1.7/changelog' },
@@ -95,7 +101,8 @@ const enSidebar = [
   ]},
   { text: 'For implementors', items: [
     { text: 'Implementation quickstart', link: '/en/authoring/quickstart' },
-    { text: 'Acceptance scenarios', link: '/en/authoring/acceptance-scenarios' }
+    { text: 'Acceptance scenarios', link: '/en/authoring/acceptance-scenarios' },
+    { text: 'Runtime profile test cases', link: '/en/authoring/runtime-profile-test-cases' }
   ]},
   { text: 'Reference', items: [
     { text: 'Glossary', link: '/en/reference/glossary' },
@@ -111,6 +118,9 @@ const enSidebar = [
     { text: 'Artifact review', link: '/en/examples/artifact-review' }
   ]},
   { text: 'Versions', items: [
+    { text: 'v0.1.8 overview', link: '/en/versions/v0.1.8/overview' },
+    { text: 'v0.1.8 specification', link: '/en/versions/v0.1.8/specification' },
+    { text: 'v0.1.8 changelog', link: '/en/versions/v0.1.8/changelog' },
     { text: 'v0.1.7 overview', link: '/en/versions/v0.1.7/overview' },
     { text: 'v0.1.7 specification', link: '/en/versions/v0.1.7/specification' },
     { text: 'v0.1.7 changelog', link: '/en/versions/v0.1.7/changelog' },
@@ -160,7 +170,8 @@ const zhSidebar = [
   ]},
   { text: '实现者', items: [
     { text: '快速开始', link: '/zh/authoring/quickstart' },
-    { text: '验收场景', link: '/zh/authoring/acceptance-scenarios' }
+    { text: '验收场景', link: '/zh/authoring/acceptance-scenarios' },
+    { text: 'Runtime Profile 测试用例', link: '/zh/authoring/runtime-profile-test-cases' }
   ]},
   { text: '参考', items: [
     { text: '术语表', link: '/zh/reference/glossary' },
@@ -176,6 +187,9 @@ const zhSidebar = [
     { text: 'Artifact review', link: '/zh/examples/artifact-review' }
   ]},
   { text: '版本', items: [
+    { text: 'v0.1.8 概览', link: '/zh/versions/v0.1.8/overview' },
+    { text: 'v0.1.8 规范', link: '/zh/versions/v0.1.8/specification' },
+    { text: 'v0.1.8 变更记录', link: '/zh/versions/v0.1.8/changelog' },
     { text: 'v0.1.7 概览', link: '/zh/versions/v0.1.7/overview' },
     { text: 'v0.1.7 规范', link: '/zh/versions/v0.1.7/specification' },
     { text: 'v0.1.7 变更记录', link: '/zh/versions/v0.1.7/changelog' },

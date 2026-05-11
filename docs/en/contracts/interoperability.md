@@ -24,3 +24,16 @@ Agent Evidence is a bridge, not a replacement for existing standards.
 | CycloneDX | Attestations, claims, evidence, counter-evidence, declarations, and confidence inform audit packaging. |
 
 Interoperability means preserving native ids and semantics while adding evidence-specific relationships. Agent Evidence should not flatten every upstream concept into generic text.
+
+## Agent Runtime profile alignment
+
+For Agent Runtime-compatible sources, Agent Evidence should consume runtime facts directly:
+
+```text
+RuntimeEvent / ThreadReadModel / TaskSnapshot
+  -> EvidencePack / ReplayCase / ReviewRecord / ExportManifest
+```
+
+Evidence packs SHOULD preserve `runtime_id`, `session_id`, `thread_id`, `turn_id`, `task_id`, `run_id`, `attempt_id`, `tool_call_id`, `action_id`, `trace_id`, and downstream evidence/replay/review/export ids when available.
+
+Evidence MUST NOT invent execution status, fabricate missing telemetry as evidence, or let replay/review rebuild a second timeline for the same turn.

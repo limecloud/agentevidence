@@ -13,6 +13,7 @@ It interoperates with runtime, UI, knowledge, artifact, telemetry, policy, tool,
 - Verification results and review verdicts as separate facts.
 - Replay cases, redaction records, privacy metadata, telemetry correlation, and export manifests.
 - Public JSON Schemas and LLM-friendly `llms.txt` / `llms-full.txt` entrypoints.
+- Runtime profile test cases that verify evidence packs, replay cases, reviews, exports, telemetry gaps, and redaction all consume the same Agent Runtime facts.
 
 ## Documentation
 
@@ -24,6 +25,7 @@ It interoperates with runtime, UI, knowledge, artifact, telemetry, policy, tool,
 - [Provenance chain](docs/en/contracts/provenance-chain.md)
 - [Verification and review](docs/en/contracts/verification-review.md)
 - [Replay case](docs/en/contracts/replay-case.md)
+- [Runtime profile test cases](docs/en/authoring/runtime-profile-test-cases.md)
 - [JSON Schemas](docs/en/reference/json-schemas.md)
 - [Research sources](docs/en/reference/research-sources.md)
 - [中文规范](docs/zh/specification.md)

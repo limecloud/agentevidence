@@ -2,12 +2,17 @@
 
 Source root: https://limecloud.github.io/agentevidence
 
-Agent Evidence is a portable standard for agent evidence, provenance, verification, review, replay, redaction, telemetry correlation, and audit export without becoming the runtime, UI, artifact store, knowledge store, policy system, or trace backend.
+Agent Evidence is a portable draft standard for agent evidence, provenance, verification, review, replay, redaction, and audit export.
 
-This file concatenates the current English documentation most useful for model context. Each section includes its source URL. Version snapshots and translated pages are linked from `llms.txt` but are not repeated beyond the latest release summary.
+This file concatenates the current English documentation most useful for model context. Each section includes its source URL. Version snapshots and translated pages are linked from `llms.txt`; the latest release snapshot is included at the end.
 
-# What is Agent Evidence?
+
+# What Is Agent Evidence
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/what-is-agent-evidence
+
 
 # What is Agent Evidence?
 
@@ -45,8 +50,13 @@ Evidence should be a graph of references and small structured facts. Large paylo
 
 A minimal compatible implementation can start with a single evidence pack that records claims, sources, support edges, provenance refs, verification status, completeness, and export metadata. It can then grow toward richer review, replay, redaction, and telemetry correlation without changing the core identity model.
 
+
 # Specification
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/specification
+
 
 # Specification
 
@@ -67,6 +77,7 @@ Agent Evidence standardizes these implementation concerns:
 7. Redaction, retention, privacy, access, and export-safety metadata.
 8. Telemetry correlation to runtime ids, trace ids, span ids, events, logs, and metrics.
 9. Export manifests for audit, support, compliance, incident response, and cross-system handoff.
+10. Runtime profile tests that prove evidence, replay, review, and export consume the same Agent Runtime facts and do not create a second execution timeline.
 
 Agent Evidence does **not** standardize a UI component model, model provider protocol, observability backend, artifact byte format, legal policy, vector store, tool registry, or workflow language.
 
@@ -259,8 +270,13 @@ A validator SHOULD check behavior and relationships:
 | `export` | Implementation can produce manifests with hashes, schemas, redactions, and completeness. |
 | `replay` | Implementation can produce replay cases and missing-fact records. |
 
-# Evidence model
+
+# Evidence Model
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/concepts/evidence-model
+
 
 # Evidence model
 
@@ -308,8 +324,13 @@ Citations are a presentation surface. Evidence records are the structured facts 
 
 Telemetry explains operational behavior: spans, events, logs, metrics, latency, errors, and resource usage. Evidence explains trust: what was asserted, why it is supported, what contradicted it, who reviewed it, and what can be replayed. Agent Evidence links to telemetry ids instead of copying traces into the evidence graph.
 
-# Evidence pack
+
+# Evidence Pack
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/evidence-pack
+
 
 # Evidence pack
 
@@ -356,8 +377,13 @@ Each completeness category SHOULD state:
 - A pack SHOULD disclose whether it is a full pack, compact projection, redacted export, or pointer-only handoff.
 - A pack SHOULD include schema refs and hashes when exported outside the source system.
 
-# Claim map
+
+# Claim Map
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/claim-map
+
 
 # Claim map
 
@@ -399,8 +425,13 @@ Claims SHOULD be granular enough to review. A whole answer as one claim is usual
 - `unverified` is honest when the system did not check or cannot check support.
 - `not_applicable` should be used for opinion, formatting, or non-evidentiary content.
 
-# Source map
+
+# Source Map
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/source-map
+
 
 # Source map
 
@@ -430,8 +461,13 @@ Selectors SHOULD be stable across display formats. Prefer owner ids, version ids
 
 An omission SHOULD include `source_id`, `reason`, `observed_at`, and optional `decision_ref`. Common reasons include `duplicate`, `low_relevance`, `stale`, `unsafe`, `private`, `license_restricted`, `contradicted`, `unavailable`, and `out_of_scope`.
 
-# Provenance chain
+
+# Provenance Chain
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/provenance-chain
+
 
 # Provenance chain
 
@@ -458,8 +494,13 @@ The provenance chain explains how an outcome was produced. It borrows the entity
 
 Provenance nodes MAY reference `runtime_id`, `session_id`, `thread_id`, `turn_id`, `task_id`, `run_id`, `tool_call_id`, `artifact_id`, `trace_id`, and `span_id`. These ids are correlation refs, not replacements for provenance semantics.
 
-# Verification and review
+
+# Verification Review
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/verification-review
+
 
 # Verification and review
 
@@ -489,8 +530,13 @@ Review verdicts SHOULD record reviewer identity or role, rubric, decision, notes
 - A failed check MAY still be waived, but the waiver must be explicit.
 - A review MAY be scoped to one claim, one artifact section, one pack, or one export.
 
-# Replay case
+
+# Replay Case
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/replay-case
+
 
 # Replay case
 
@@ -516,8 +562,13 @@ Replay cases SHOULD be honest about non-deterministic model output and unavailab
 
 A replay attempt SHOULD record whether it matched expected claims, artifact hashes, verification results, or review conditions. A mismatch is evidence, not an automatic failure of the original pack.
 
-# Redaction and privacy
+
+# Redaction Privacy
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/redaction-privacy
+
 
 # Redaction and privacy
 
@@ -541,8 +592,13 @@ A redacted pack SHOULD remain structurally useful. It should expose that a fact 
 
 Evidence exports SHOULD include intended audience, retention class, expiry, allowed use, and whether downstream systems may re-identify tokenized values. Expired refs SHOULD become `expired`, not silently disappear.
 
-# Export manifest
+
+# Export Manifest
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/export-manifest
+
 
 # Export manifest
 
@@ -569,8 +625,13 @@ Exports SHOULD be stable enough for audit and support handoff, but must not impl
 
 Common roles include `pack`, `claim_map`, `source_map`, `provenance`, `verification`, `review`, `replay`, `redaction`, `artifact_ref`, `schema`, `signature`, and `readme`.
 
-# Telemetry correlation
+
+# Telemetry Correlation
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/telemetry-correlation
+
 
 # Telemetry correlation
 
@@ -604,8 +665,13 @@ Telemetry explains what happened operationally. Evidence explains why an outcome
 | Verification check | check activity id, span id, issue refs. |
 | Export | export activity id, file hashes, pack id. |
 
+
 # Interoperability
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/contracts/interoperability
+
 
 # Interoperability
 
@@ -629,8 +695,26 @@ Agent Evidence is a bridge, not a replacement for existing standards.
 
 Interoperability means preserving native ids and semantics while adding evidence-specific relationships. Agent Evidence should not flatten every upstream concept into generic text.
 
-# Implementation quickstart
+## Agent Runtime profile alignment
+
+For Agent Runtime-compatible sources, Agent Evidence should consume runtime facts directly:
+
+```text
+RuntimeEvent / ThreadReadModel / TaskSnapshot
+  -> EvidencePack / ReplayCase / ReviewRecord / ExportManifest
+```
+
+Evidence packs SHOULD preserve `runtime_id`, `session_id`, `thread_id`, `turn_id`, `task_id`, `run_id`, `attempt_id`, `tool_call_id`, `action_id`, `trace_id`, and downstream evidence/replay/review/export ids when available.
+
+Evidence MUST NOT invent execution status, fabricate missing telemetry as evidence, or let replay/review rebuild a second timeline for the same turn.
+
+
+# Quickstart
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/authoring/quickstart
+
 
 # Implementation quickstart
 
@@ -680,8 +764,13 @@ Source: https://limecloud.github.io/agentevidence/en/authoring/quickstart
 - Expose JSON Schemas for validators and export consumers.
 - Add at least one acceptance test for redacted export and one for contradiction.
 
-# Acceptance scenarios
+
+# Acceptance Scenarios
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/authoring/acceptance-scenarios
+
 
 # Acceptance scenarios
 
@@ -727,8 +816,88 @@ Given no trace backend was connected, the pack marks telemetry as `not_collected
 
 Given a peer agent returns an artifact and message id, evidence preserves native peer ids and links them to local claims without rewriting the peer records.
 
-# Answer with citations
+## Agent Runtime profile evidence
+
+Given a runtime turn exports evidence, the evidence pack preserves runtime correlation ids, replay and review use the same source facts, and missing telemetry is marked `not_collected` or `unavailable` rather than fabricated as evidence. See [Runtime profile test cases](./runtime-profile-test-cases).
+
+
+# Runtime Profile Test Cases
+
+
+
+Source: https://limecloud.github.io/agentevidence/en/authoring/runtime-profile-test-cases
+
+
+# Runtime profile test cases
+
+Use these cases when Agent Evidence consumes Agent Runtime, Lime AgentRuntime Profile, or an equivalent runtime spine. The goal is to prove that evidence, replay, review, and audit exports all consume the same runtime facts instead of rebuilding independent summaries.
+
+## Canonical boundary
+
+```text
+RuntimeEvent / ThreadReadModel / TaskSnapshot
+  -> EvidencePack / ReplayCase / ReviewRecord / ExportManifest
+  -> Agent UI timeline, review lane, replay lane, and audit entrypoints
+```
+
+Agent Runtime owns execution facts. Agent Evidence owns portable evidence packaging, provenance, verification, review, replay, redaction, and export. Evidence may summarize runtime facts, but it must not invent runtime status or known gaps.
+
+## Required runtime correlation
+
+Evidence records SHOULD preserve these ids when available:
+
+| Field | Purpose |
+| --- | --- |
+| `runtime_id` / `session_id` / `thread_id` / `turn_id` | Join evidence to the execution spine. |
+| `task_id` / `run_id` / `attempt_id` | Join evidence to task attempts and retry history. |
+| `step_id` / `tool_call_id` / `action_id` | Join evidence to tools, actions, permission waits, and failures. |
+| `artifact_id` / `context_id` / `policy_decision_id` | Join evidence to adjacent owners. |
+| `trace_id` / `span_id` | Join evidence to telemetry when collected. |
+| `evidence_pack_id` / `replay_id` / `review_id` / `export_id` | Join downstream evidence artifacts. |
+
+## Test cases
+
+| ID | Case | Input facts | Expected result |
+| --- | --- | --- | --- |
+| AEV-AR-ID-001 | Evidence pack preserves runtime spine | Completed or failed turn | Pack scope includes `session_id/thread_id/turn_id` and applicable task/run ids. |
+| AEV-AR-ID-002 | Failed attempt remains visible | `task.attempt.failed` then retry | Evidence timeline includes both failed and retried attempts. |
+| AEV-AR-TOOL-001 | Tool failure is auditable | `tool.failed` with `tool_call_id` | Evidence links failure category, output refs, and telemetry refs without losing `tool_call_id`. |
+| AEV-AR-ACTION-001 | Permission denial is not success | `action.required -> action.resolved(deny)` | Evidence records denied decision and does not claim tool execution success. |
+| AEV-AR-ROUTE-001 | Routing decision is explainable | `routing.single_candidate` or `routing.decided` | Evidence includes selected model, decision source, and cost/limit refs if available. |
+| AEV-AR-REPLAY-001 | Replay uses same source facts | Evidence pack already exists | Replay case points to pack/source ids instead of rebuilding a second timeline. |
+| AEV-AR-REVIEW-001 | Review uses same source facts | Review generated from pack | Review verdict references evidence ids and runtime scope; it does not create parallel status truth. |
+| AEV-AR-GAP-001 | Known gaps are only applicable gaps | No matching request telemetry | Pack records empty/unavailable telemetry summary, not fake `unlinked` evidence. |
+| AEV-AR-REDACT-001 | Redaction preserves auditability | Sensitive tool/context output | Redacted pack keeps redaction reason, policy refs, and safe source refs. |
+| AEV-AR-EXPORT-001 | Export manifest is complete | Evidence export requested | Manifest lists pack, replay, review, schema, redaction, and runtime scope refs. |
+
+## Failure cases
+
+These are incompatible with Agent Evidence:
+
+1. Replay, review, and evidence each construct different timelines for the same turn.
+2. A missing telemetry relationship is exported as a fabricated session-level evidence item.
+3. Evidence claims a tool succeeded when runtime only has a denied action or failed tool event.
+4. Redaction removes the reason and owner, making the audit trail unverifiable.
+5. Evidence pack lacks enough runtime ids to join back to the originating turn or task.
+
+## Minimum validation set
+
+For Agent Runtime-compatible integration, run at least:
+
+1. AEV-AR-ID-001 and AEV-AR-ID-002.
+2. AEV-AR-TOOL-001, AEV-AR-ACTION-001, and AEV-AR-ROUTE-001.
+3. AEV-AR-REPLAY-001 and AEV-AR-REVIEW-001.
+4. AEV-AR-GAP-001 and AEV-AR-EXPORT-001.
+
+Runtime proves what happened. Agent Evidence proves how that runtime fact can be trusted, replayed, reviewed, redacted, and exported.
+
+
+# Answer With Citations
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/examples/answer-with-citations
+
 
 # Answer with citations
 
@@ -760,8 +929,13 @@ An answer with citations should create claims first, then connect citations to t
 }
 ```
 
-# Tool run audit
+
+# Tool Run Audit
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/examples/tool-run-audit
+
 
 # Tool run audit
 
@@ -794,8 +968,13 @@ When a tool result affects an answer, record both the result ref and the runtime
 }
 ```
 
-# Artifact review
+
+# Artifact Review
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/examples/artifact-review
+
 
 # Artifact review
 
@@ -820,8 +999,13 @@ Artifact review evidence should link artifact version, checks, diff, and verdict
 }
 ```
 
+
 # Glossary
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/reference/glossary
+
 
 # Glossary
 
@@ -841,8 +1025,13 @@ Source: https://limecloud.github.io/agentevidence/en/reference/glossary
 | Export manifest | File, schema, hash, access, and completeness record for an exported pack. |
 | Completeness | Category-level statement about which facts are present, partial, missing, or not collected. |
 
-# JSON Schemas
+
+# Json Schemas
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/reference/json-schemas
+
 
 # JSON Schemas
 
@@ -869,8 +1058,13 @@ Agent Evidence v0.1.0 publishes JSON Schemas for validation, export negotiation,
 - Keep custom fields namespaced when they are product-specific.
 - Record validation failures as `verification_result` facts when they affect a pack.
 
-# Ecosystem boundaries
+
+# Ecosystem Boundaries
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/reference/ecosystem-boundaries
+
 
 # Ecosystem boundaries
 
@@ -888,8 +1082,13 @@ Agent Evidence connects adjacent systems without absorbing their ownership.
 | MCP servers | Tools, resources, prompts. | Evidence links tool/resource refs and invocation facts. |
 | Compliance systems | Business rules and legal interpretation. | Evidence exports facts; compliance systems make domain verdicts. |
 
-# Research sources
+
+# Research Sources
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/reference/research-sources
+
 
 # Research sources
 
@@ -919,8 +1118,13 @@ Agent Evidence v0.1.0 was informed by current standards and implementation patte
 - Export manifests must include hashes, schemas, and completeness state.
 - Peer-agent handoff should preserve native ids and refs rather than normalizing them away.
 
-# Source analysis
+
+# Source Analysis
+
+
+
 Source: https://limecloud.github.io/agentevidence/en/reference/source-analysis
+
 
 # Source analysis
 
@@ -950,59 +1154,13 @@ The standard therefore focuses on portable evidence graphs rather than another l
 | Safe sharing | Redaction and privacy records. |
 | Cross-system support | Export manifest and telemetry correlation. |
 
-# Agent Evidence v0.1.0
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.0/overview
 
-# Agent Evidence v0.1.0
+# Agent Ecosystem
 
-Agent Evidence v0.1.0 defines the first portable evidence standard for agent work: claim maps, source maps, provenance chains, verification results, review verdicts, replay cases, redaction records, telemetry correlation, events, schemas, and export manifests.
 
-## Highlights
 
-- Defines Evidence Pack as the portable container for audit and review facts.
-- Adds claim-to-source grounding beyond simple citations.
-- Adds source omission, contradiction, freshness, and trust records.
-- Adds provenance chains for tools, models, retrieval, artifacts, humans, peer agents, and runtimes.
-- Adds verification and review as distinct facts.
-- Adds replay, redaction, privacy, telemetry, event, and export guidance.
-- Adds public JSON Schemas and LLM-friendly documentation entrypoints.
-
-# v0.1.1 specification snapshot
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.0/specification
-
-# v0.1.1 specification snapshot
-
-v0.1.0 requires compatible implementations to expose evidence pack identity, claim map semantics, source map semantics, provenance chains, verification results, review verdicts, replay cases, redaction records, telemetry correlation, evidence events, and export manifests when those facts exist.
-
-## Key contracts
-
-- [Evidence pack](../../contracts/evidence-pack.md)
-- [Claim map](../../contracts/claim-map.md)
-- [Source map](../../contracts/source-map.md)
-- [Provenance chain](../../contracts/provenance-chain.md)
-- [Verification and review](../../contracts/verification-review.md)
-- [Replay case](../../contracts/replay-case.md)
-- [Redaction and privacy](../../contracts/redaction-privacy.md)
-- [Export manifest](../../contracts/export-manifest.md)
-- [Telemetry correlation](../../contracts/telemetry-correlation.md)
-- [Specification](../../specification.md)
-
-# v0.1.0 changelog
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.0/changelog
-
-# v0.1.0 changelog
-
-## Added
-
-- Initial Agent Evidence draft standard.
-- Evidence pack, claim map, source map, provenance chain, verification/review, replay, redaction, telemetry, interoperability, event, and export contracts.
-- Public JSON Schemas for evidence packs, events, claim maps, source maps, provenance, verification/review, replay cases, and export manifests.
-- English and Simplified Chinese documentation site.
-- LLM-friendly `llms.txt`, `llms-full.txt`, `llm.txt`, and `llm-full.txt` entrypoints.
-- GitHub Pages workflow and release notes.
-
-# Agent Standards Ecosystem
 Source: https://limecloud.github.io/agentevidence/en/reference/agent-ecosystem
+
 
 # Agent Standards Ecosystem
 
@@ -1067,30 +1225,261 @@ These candidates should remain design notes until they can be specified without 
 
 External protocols are references, not ownership transfers. The Agent standards should preserve their native ids and semantics while defining agent-specific relationships.
 
-# Agent Evidence v0.1.3
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.3/overview
 
-# Agent Evidence v0.1.3
 
-Agent Evidence v0.1.3 fixes repository-base homepage asset links. The localized home pages now keep their home layout while LLM entrypoint links resolve under the project site path and the navigation logo loads from the correct public asset path.
+# V0.1.8 overview
+
+
+
+Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.8/overview
+
+
+# Agent Evidence v0.1.8
+
+Agent Evidence v0.1.8 is a patch release that aligns evidence, replay, review, redaction, and export records with the Agent Runtime profile spine.
 
 ## Highlights
 
-- Fixes LLM entrypoint links on localized home pages for repository-base deployments.
-- Fixes documentation logo asset paths for repository-base deployments.
-- Keeps the localized home page structure introduced in v0.1.2.
-- Keeps the core Agent Evidence specification compatible with v0.1.2.
+- Adds runtime profile test cases for runtime ids, tool failures, permission denial, routing, evidence packs, replay, review, known gaps, redaction, and export manifests.
+- Aligns interoperability guidance with Agent Runtime events, thread read models, and task snapshots.
+- Adds optional runtime profile correlation fields to event and evidence pack schemas.
+- Refreshes README, navigation, LLM entrypoints, release notes, package metadata, and version snapshots for v0.1.8.
 
-# v0.1.6 overview
-Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.6/overview
 
-# v0.1.6 Overview
+# V0.1.8 specification
 
-Agent Evidence v0.1.6 is a patch release that refreshes the Agent standards ecosystem after Agent Tool became a current published standard.
 
-## Included
 
-- Agent Tool link in current standards tables.
-- Updated boundary map with the portable tool layer.
-- LLM entrypoint refresh for AI clients.
-- No breaking protocol changes to Agent Evidence.
+Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.8/specification
+
+
+# Specification
+
+Agent Evidence latest draft is a portable standard for evidence records around agent work. The core contract is the boundary between produced agent outcomes and the evidence needed to trust, replay, review, redact, and audit those outcomes.
+
+Agent Evidence owns evidence relationships and read models. It does not own runtime execution, telemetry storage, source documents, artifact bytes, policy verdicts, legal conclusions, or UI rendering.
+
+## Scope
+
+Agent Evidence standardizes these implementation concerns:
+
+1. Evidence pack identity, scope, lifecycle, and completeness status.
+2. Claim maps that connect assertions to sources, artifacts, tool results, telemetry refs, and verification facts.
+3. Source maps with selectors, snippets, retrieval metadata, omissions, freshness, trust, and contradiction records.
+4. Provenance chains linking entities, activities, agents, models, tools, humans, artifacts, peer tasks, and runs.
+5. Verification results, review verdicts, rubrics, sign-off facts, and open issues.
+6. Replay cases that describe what can be reconstructed and which facts are missing.
+7. Redaction, retention, privacy, access, and export-safety metadata.
+8. Telemetry correlation to runtime ids, trace ids, span ids, events, logs, and metrics.
+9. Export manifests for audit, support, compliance, incident response, and cross-system handoff.
+10. Runtime profile tests that prove evidence, replay, review, and export consume the same Agent Runtime facts and do not create a second execution timeline.
+
+Agent Evidence does **not** standardize a UI component model, model provider protocol, observability backend, artifact byte format, legal policy, vector store, tool registry, or workflow language.
+
+## Pressure from real evidence systems
+
+Agent Evidence is not a prettier citation format. Real agent systems repeatedly show these requirements:
+
+1. Final answers mix facts, recommendations, and generated fields; each needs a separate support state.
+2. Sources can support one claim, contradict another, and be background context for a third.
+3. Retrieval systems omit, deduplicate, filter, or reject sources; reviewers need to know why.
+4. Tool results and artifacts influence claims long after raw output was truncated or redacted.
+5. Runtime traces are necessary for debugging but insufficient for review because they do not classify claim support.
+6. Review and verification must be independently recorded; a passing check is not an approval.
+7. Replay is often approximate because model output, APIs, indexes, policies, and permissions change.
+8. Privacy redaction must preserve audit shape instead of silently deleting inconvenient facts.
+9. Evidence must survive UI changes, backend migrations, support exports, and peer-agent handoff.
+
+## Reference architecture
+
+```mermaid
+flowchart TB
+  Outcome[Answer / artifact / decision] --> Extractor[Claim extractor]
+  Runtime[Runtime events] --> Provenance[Provenance builder]
+  Sources[Documents / tools / artifacts / humans] --> SourceMap[Source map]
+  Telemetry[Traces / spans / logs] --> Correlation[Telemetry correlation]
+
+  Extractor --> ClaimMap[Claim map]
+  SourceMap --> ClaimMap
+  Provenance --> ClaimMap
+  Correlation --> Provenance
+
+  ClaimMap --> Verification[Verification checks]
+  Verification --> Review[Review verdicts]
+  ClaimMap --> Replay[Replay cases]
+  ClaimMap --> Redaction[Redaction records]
+  Review --> Pack[Evidence pack]
+  Replay --> Pack
+  Redaction --> Pack
+  Pack --> Export[Export manifest]
+```
+
+A compatible implementation may embed these steps in one process or split them across services. The contract is the portable evidence model, not deployment topology.
+
+## Core objects
+
+| Object | Purpose |
+| --- | --- |
+| `evidence_pack` | Portable container for the evidence graph of one session, task, run, artifact, answer, or review scope. |
+| `claim` | Assertion, decision, recommendation, generated field, or artifact section that may require support. |
+| `source_ref` | Pointer to a document, knowledge item, retrieval result, tool output, artifact, trace, human input, policy, peer record, or external record. |
+| `support_edge` | Relationship between a claim and supporting, contradicting, qualifying, or background evidence. |
+| `provenance_node` | Entity, activity, or agent-like participant in production of the outcome. |
+| `verification_result` | Check result with status, coverage, severity, and evidence links. |
+| `review_verdict` | Human, automated, or policy review decision. |
+| `replay_case` | Instructions and boundaries for reconstructing the run or outcome. |
+| `redaction_record` | What was hidden, transformed, tokenized, or withheld and why. |
+| `export_manifest` | Portable manifest describing files, schemas, hashes, access, and completeness. |
+
+## Identity model
+
+| Identity | Meaning |
+| --- | --- |
+| `evidence_pack_id` | Stable id for the evidence pack. |
+| `scope_id` | Session, thread, turn, task, run, artifact, answer, dataset row, review, incident, or external case id. |
+| `claim_id` | Stable id for a claim or generated assertion. |
+| `source_id` | Stable id for a source reference. |
+| `edge_id` | Stable id for a support, contradiction, provenance, or review edge. |
+| `verification_id` | Stable id for a verification result. |
+| `review_id` | Stable id for a review verdict. |
+| `replay_id` | Stable id for a replay case. |
+| `redaction_id` | Stable id for a redaction record. |
+| `export_id` | Stable id for an export manifest. |
+| `trace_id` / `span_id` | Telemetry correlation ids when available. |
+
+A compatible implementation MUST NOT rely on a single message id to represent all evidence. Claims, sources, artifacts, tool calls, reviews, replay cases, and exports need independently stable ids.
+
+## Evidence pack envelope
+
+Every evidence pack SHOULD include:
+
+| Field | Requirement |
+| --- | --- |
+| `evidence_pack_id` | Required stable pack id. |
+| `schema_version` | Required Agent Evidence schema version. |
+| `scope` | Required scope object with at least one owner or external id. |
+| `status` | Required lifecycle status. |
+| `created_at`, `updated_at` | Required timestamps. |
+| `producer` | Required runtime, service, worker, or host that assembled the pack. |
+| `claims`, `sources`, `support_edges` | Inline compact facts or refs to claim/source maps. |
+| `provenance` | Production graph or ref. |
+| `verification_results`, `reviews` | Check and verdict facts. |
+| `replay_cases` | Reconstruction instructions when available. |
+| `redactions` | Redaction summary and records. |
+| `telemetry` | Runtime and observability correlation refs. |
+| `completeness` | Category-level completeness state. |
+| `refs` | External payload refs, schemas, artifacts, traces, or export locations. |
+
+Large payloads SHOULD be referenced, not copied. Inline data is appropriate for compact facts needed for offline inspection.
+
+## Lifecycle
+
+Evidence packs SHOULD support these states:
+
+| Status | Meaning |
+| --- | --- |
+| `draft` | Evidence graph is being assembled. |
+| `collecting` | Runtime, telemetry, source, artifact, or review facts are still arriving. |
+| `ready` | Pack is complete enough for normal inspection. |
+| `partial` | Pack is usable but known facts are missing. |
+| `verified` | Required checks passed or were explicitly marked not applicable. |
+| `reviewed` | Human, automated, or policy review produced a verdict. |
+| `exported` | Export manifest was produced. |
+| `redacted` | Sensitive content was transformed or withheld. |
+| `expired` | Retention policy removed required refs or payloads. |
+| `invalid` | Pack is malformed or contradicts authoritative facts. |
+
+## Event envelope
+
+Evidence events MAY be transported through CloudEvents-like envelopes, runtime event streams, logs, queues, or domain APIs. Every exported event SHOULD include:
+
+| Field | Requirement |
+| --- | --- |
+| `type` | Required event class. |
+| `event_id` | Required unique event id. |
+| `timestamp` | Required producer timestamp. |
+| `schema_version` | Agent Evidence event schema version. |
+| `evidence_pack_id` | Present when the event belongs to a pack. |
+| `claim_id`, `source_id`, `verification_id`, `review_id`, `replay_id`, `export_id` | Present when applicable. |
+| `trace_id`, `span_id` | Present when telemetry is available. |
+| `subject` | Optional scoped subject such as answer, task, artifact, or review. |
+| `payload` | Typed event payload or ref. |
+
+## Event classes
+
+Compatible implementations SHOULD emit or export these event classes:
+
+- `evidence.pack.created`
+- `evidence.pack.updated`
+- `evidence.claim.added`
+- `evidence.source.linked`
+- `evidence.support.updated`
+- `evidence.provenance.linked`
+- `evidence.verification.completed`
+- `evidence.review.completed`
+- `evidence.replay.created`
+- `evidence.redaction.applied`
+- `evidence.export.created`
+- `evidence.warning`
+- `evidence.error`
+
+## Completeness model
+
+A pack SHOULD declare completeness by category, not only as one boolean:
+
+| Category | Examples |
+| --- | --- |
+| `runtime` | session, thread, turn, task, run, tool ids. |
+| `telemetry` | trace ids, spans, logs, metrics. |
+| `sources` | selected, omitted, missing, stale, contradicted sources. |
+| `claims` | supported, unsupported, contradicted, unreviewed claims. |
+| `artifacts` | artifact refs, versions, diffs, exports. |
+| `verification` | checks passed, failed, skipped, not applicable. |
+| `privacy` | redactions, retention, access, export controls. |
+| `replay` | deterministic inputs, unavailable systems, non-replayable steps. |
+
+Missing facts MUST be represented as `unknown`, `unavailable`, `redacted`, `expired`, `not_applicable`, or `not_collected` rather than inferred as success.
+
+## Validation
+
+A validator SHOULD check behavior and relationships:
+
+- every claim has a status and support classification.
+- source refs identify owner, location, selectors, and retrieval or selection context where applicable.
+- support edges use explicit relationships such as `supports`, `contradicts`, `qualifies`, or `background`.
+- provenance links identify produced-by, used, derived-from, associated-with, or attributed-to relations.
+- verification and review facts do not overwrite each other.
+- telemetry ids are references, not a replacement for evidence semantics.
+- redacted packs remain structurally valid and disclose redaction categories.
+- replay cases declare what cannot be replayed.
+- export manifests include schema version, file list, hashes, and completeness status.
+
+## Compatibility levels
+
+| Level | Requirement |
+| --- | --- |
+| `reference-only` | Implementation can link to an external evidence pack but does not validate it. |
+| `read` | Implementation can read pack identity, claims, sources, support edges, and completeness. |
+| `write` | Implementation can produce valid packs and update events. |
+| `review` | Implementation can attach verification results and review verdicts without corrupting existing facts. |
+| `export` | Implementation can produce manifests with hashes, schemas, redactions, and completeness. |
+| `replay` | Implementation can produce replay cases and missing-fact records. |
+
+
+# V0.1.8 changelog
+
+
+
+Source: https://limecloud.github.io/agentevidence/en/versions/v0.1.8/changelog
+
+
+# v0.1.8 Changelog
+
+### Added
+
+- Adds Agent Runtime profile test cases in English and Simplified Chinese, covering runtime spine ids, tool failures, permission denial, routing decisions, evidence packs, replay, review, known gaps, redaction, and export manifests.
+
+### Changed
+
+- Aligns interoperability guidance with Agent Runtime `RuntimeEvent`, `ThreadReadModel`, and `TaskSnapshot` sources.
+- Extends event and evidence pack schemas with optional runtime profile correlation fields such as `attempt_id`, `step_id`, `tool_call_id`, `action_id`, `context_id`, and `policy_decision_id`.
